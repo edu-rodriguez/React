@@ -10,13 +10,32 @@ import BotonSimpleClase from './components/BotonSimpleClase';
 import EligeBoton from './components/EligeBoton';
 import Suma from './components/Suma';
 import Eventos from './components/Eventos';
+import Contador from './components/Contador';
+import FormularioSimple from './FormularioSimple';
+import Formulario from './components/Formulario';
 
 function App() {
+    const handleSumaResuelta = (resultado) => {
+        console.log(`Se ha resuelto la suma con resultado: ${resultado}`)
+    }
+
+    const handleInformaResultado = (resultado) => {
+        console.log(`El contador tiene un valor de ${resultado}`);
+    }
+
+    const handleEnviaData = (data) => {
+        console.log(data);
+    }
+
     return (
         <>
             <EligeBoton/>
-            <Suma numA={3} numB={5}></Suma>
+            <Suma numA={3} numB={5} sumaResuelta={handleSumaResuelta}></Suma>
+            <Suma numA={51} numB={93} sumaResuelta={handleSumaResuelta}></Suma>
             <Eventos/>
+            <Contador informaResultado = {handleInformaResultado}/>
+            <FormularioSimple/>
+            <Formulario enviaData={handleEnviaData}/>
         </>
     );
 }
