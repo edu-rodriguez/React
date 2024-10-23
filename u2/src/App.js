@@ -11,8 +11,8 @@ import EligeBoton from './components/EligeBoton';
 import Suma from './components/Suma';
 import Eventos from './components/Eventos';
 import Contador from './components/Contador';
-import FormularioSimple from './FormularioSimple';
 import Formulario from './components/Formulario';
+import FormularioSimple from './components/FormularioSimple';
 
 function App() {
     const handleSumaResuelta = (resultado) => {
